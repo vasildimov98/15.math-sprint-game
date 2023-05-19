@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Sprint Game</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Game Container -->
+    <div class="game">
+        <div class="game__header">
+            <h1>Math Sprint Game</h1>
+        </div>
+        <!-- Splash page -->
+        <div class="game__card" id="splash-page">
+            <form id="game__start-form">
+                <div class="game__selection">
+                    <!-- 10 Question Radio Input -->
+                    <div class="game__radio">
+                        <label for="value-10">10 Questions</label>
+                        <input type="radio" name="questions" value="10" id="value-10">
+                        <span class="game__best-score">
+                            <span>Best Score</span>
+                            <span class="game__best-score-value"></span>
+                        </span>
+                    </div>
+
+                    <!-- 25 Question Radio Input -->
+                    <div class="game__radio">
+                        <label for="value-25">25 Questions</label>
+                        <input type="radio" name="questions" value="25" id="value-25">
+                        <span class="game__best-score">
+                            <span>Best Score</span>
+                            <span class="game__best-score-value"></span>
+                        </span>
+                    </div>
+
+                    <!-- 50 Question Radio Input -->
+                    <div class="game__radio">
+                        <label for="value-50">50 Questions</label>
+                        <input type="radio" name="questions" value="50" id="value-50">
+                        <span class="game__best-score">
+                            <span>Best Score</span>
+                            <span class="game__best-score-value"></span>
+                        </span>
+                    </div>
+
+                    <!-- 99 Question Radio Input -->
+                    <div class="game__radio">
+                        <label for="value-99">99 Questions</label>
+                        <input type="radio" name="questions" value="99" id="value-99">
+                        <span class="game__best-score">
+                            <span>Best Score</span>
+                            <span class="game__best-score-value"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Start Button -->
+                <div class="game__footer">
+                    <button class="game__start" type="submit">Start Round</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Countdown page -->
+        <div class="game__card" id="countdown-page" hidden>
+            <h1 class="game__countdown"></h1>
+        </div>
+
+        <!-- Game page -->
+        <div class="game__card" id="game-page" hidden>
+            <!-- item container -->
+            <div class="game__items"></div>
+            <div class="game__item-footer">
+                <button class="wrong" onclick="select(false)">Wrong</button>
+                <button class="right" onclick="select(true)">Right</button>
+            </div>
+        </div>
+
+        <!-- Score Page -->
+        <div class="game__card" id="score-page" hidden>
+            <!-- Score container -->
+            <div class="game__score">
+                <h1 class="title">Your time</h1>
+                <h1 class="final-time"></h1>
+                <h1 class="base-time"></h1>
+                <h1 class="penalty-time"></h1>
+            </div>
+            <!-- Play again button -->
+            <div class="game__score-footer">
+                <button class="play-again" onclick="playAgain()">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="./shuffle.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
